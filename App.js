@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { MenuProvider } from 'react-native-popup-menu';
+import AdminHome from './Components/AdminHomeScreen/AdminHome';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <MenuProvider>
+        <AdminHome></AdminHome>
+      </MenuProvider>
       <StatusBar style="auto" />
     </View>
   );
