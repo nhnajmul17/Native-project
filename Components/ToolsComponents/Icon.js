@@ -15,7 +15,7 @@ export default function Icon({ title, size, image, backgroundColor }) {
                     width: size,
                     height: size,
                     borderRadius: size / 2,
-                    backgroundColor,
+                    backgroundColor: backgroundColor,
                     justifyContent: "center",
                     alignItems: "center",
                 }}

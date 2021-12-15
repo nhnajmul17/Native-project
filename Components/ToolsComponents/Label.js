@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import color from "../config/colors";
 
 import { StyleSheet, Text, View, YellowBox } from "react-native";
 export default function Label({ text, style }) {

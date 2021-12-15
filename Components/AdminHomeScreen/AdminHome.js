@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, } from 'react-native'
+import { View, StyleSheet, ImageBackground, TouchableOpacity, Pressable, } from 'react-native'
 import Icon from '../ToolsComponents/Icon'
 import ListItem from '../ToolsComponents/ListItem'
 import ValueLabel from '../ToolsComponents/ValueLabel'
@@ -9,7 +9,7 @@ import {
     MenuOptions,
     MenuOption,
     MenuTrigger,
-    MenuProvider,
+
 } from "react-native-popup-menu";
 
 export default function AdminHome() {
@@ -20,14 +20,14 @@ export default function AdminHome() {
                     style={styles.banner}
                     source={require("../../assets/headerBanner.png")}
                     resizeMode="contain"
-                    imageStyle={{ opacity: 0.2 }}
+                    imageStyle={{ opacity: 0.3 }}
                 >
                     <View style={styles.profileContainer}>
                         <ListItem
                             imageSrc={require("../../assets/Icon/admin.png")}
                             imageSize={50}
                             text={"User"}
-                            textStyle={{ color: '#fff', marginLeft: -10 }}
+                            textStyle={{ color: '#000', marginLeft: -10 }}
                         />
                     </View>
 
@@ -54,23 +54,233 @@ export default function AdminHome() {
                 </ImageBackground>
             </View>
 
+            <View style={styles.iconSection}>
+                <Menu>
+                    <MenuTrigger>
+                        <Icon
+                            title="Statement"
+                            image={require("../../assets/Icon/statement.png")}
+                            size={60}
+                            backgroundColor="#9cf0f0"
 
+                        />
+                    </MenuTrigger>
+
+                    <MenuOptions>
+                        <MenuOption
+                            onSelect={() => navigation.navigate("SummaryStatementNavigator")}
+                        >
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/summaryStatement.png")}
+                                imageSize={30}
+                                text={"Summary Statement"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                        <MenuOption onSelect={() => navigation.navigate("Individual Statement")}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/individualStatement.png")}
+                                imageSize={30}
+                                text={"Individual Statement"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                        <MenuOption onSelect={() => alert('Touched')}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/overallStatement.png")}
+                                imageSize={30}
+                                text={"Overall Statement"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                    </MenuOptions>
+                </Menu>
+
+                <Menu>
+                    <MenuTrigger onPress={() => navigation.navigate("Deposit")}>
+                        <Icon
+                            title="Deposit"
+                            image={require("../../assets/Icon/deposit.png")}
+                            size={60}
+                            backgroundColor="#9cf0f0"
+
+                        />
+                    </MenuTrigger>
+                </Menu>
+
+                <Menu>
+                    <MenuTrigger>
+                        <Icon
+                            title="Investment"
+                            image={require("../../assets/Icon/investment.png")}
+                            size={60}
+                            backgroundColor="#9cf0f0"
+                        />
+                    </MenuTrigger>
+
+                    <MenuOptions>
+                        <MenuOption onSelect={() => navigation.navigate("Add Investment")}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/add.png")}
+                                imageSize={30}
+                                text={"Add Investment"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                        <MenuOption onSelect={() => alert("Update Investment")}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/edit.png")}
+                                imageSize={30}
+                                text={"Update Investment"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                    </MenuOptions>
+                </Menu>
+
+                <Menu>
+                    <MenuTrigger>
+                        <Icon
+                            title="Asset"
+                            image={require("../../assets/Icon/asset.png")}
+                            size={60}
+                            backgroundColor="#9cf0f0"
+
+                        />
+                    </MenuTrigger>
+
+                    <MenuOptions>
+                        <MenuOption onSelect={() => navigation.navigate("Create Asset")}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/add.png")}
+                                imageSize={30}
+                                text={"Add Asset"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                        <MenuOption
+                            onSelect={() => navigation.navigate("Create Asset Type")}
+                        >
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/create1.png")}
+                                imageSize={30}
+                                text={"Create Asset Type"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                        <MenuOption
+                            onSelect={() => navigation.navigate("Create Asset Holder")}
+                        >
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/create.png")}
+                                imageSize={30}
+                                text={"Create Asset Holder"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+
+                    </MenuOptions>
+                </Menu>
+
+                <Menu>
+                    <MenuTrigger>
+                        <Icon
+                            title="Iron Bank"
+                            image={require("../../assets/Icon/bank.png")}
+                            size={60}
+                            backgroundColor="#9cf0f0"
+
+                        />
+                    </MenuTrigger>
+
+                    <MenuOptions>
+                        <MenuOption onSelect={() => navigation.navigate("Add Loan Info")}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/add.png")}
+                                imageSize={30}
+                                text={"Add Loan Info"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                        <MenuOption onSelect={() => alert(`Touched`)}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/edit.png")}
+                                imageSize={30}
+                                text={"Update Loan Info"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                    </MenuOptions>
+                </Menu>
+
+                <Menu>
+                    <MenuTrigger>
+                        <Icon
+                            title="Settlement"
+                            image={require("../../assets/Icon/transfer.png")}
+                            size={60}
+                            backgroundColor="#9cf0f0"
+
+                        />
+                    </MenuTrigger>
+
+                    <MenuOptions>
+                        <MenuOption onSelect={() => alert(`Touched`)}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/transferAsset.png")}
+                                imageSize={30}
+                                text={"Transfer Asset"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                    </MenuOptions>
+                </Menu>
+
+                {/* <MenuTrigger onPress={() => alert("Touched The item")}>
+                    <Icon
+                        title="Members"
+                        image={require("../../assets/Icon/member.png")}
+                        size={60}
+                        backgroundColor="#9cf0f0"
+                    />
+                </MenuTrigger> */}
+
+                <MenuTrigger onPress={() => alert("Touched The item")}>
+                    <Icon
+                        title="Information"
+                        image={require("../../assets/Icon/information.png")}
+                        size={60}
+                        backgroundColor="#9cf0f0"
+                    />
+                </MenuTrigger>
+
+                <TouchableOpacity onPress={() => alert("Rules")}>
+                    <Icon
+                        title="Rules"
+                        image={require("../../assets/Icon/rules.png")}
+                        size={60}
+                        backgroundColor="#9cf0f0"
+                    />
+                </TouchableOpacity>
+            </View>
 
 
             <View style={styles.bottomSection}>
                 <View style={styles.footer}>
                     <View style={styles.settingsIcon}>
-                        <Icon image={require("../../assets/Icon/settings.png")} size={40} />
+                        <Pressable onPress={() => alert('Settings Are building')} >
+                            <Icon image={require("../../assets/Icon/settings.png")} size={40} />
+                        </Pressable>
                     </View>
                     <View style={styles.notificationIcon}>
-                        <Icon
-                            image={require("../../assets/Icon/notification.png")}
-                            size={40}
-                        />
+                        <Pressable onPress={() => alert('No notification for now')} >
+                            <Icon image={require("../../assets/Icon/notification.png")} size={40} />
+                        </Pressable>
+
                     </View>
                 </View>
             </View>
-        </View>
+        </View >
     )
 }
 

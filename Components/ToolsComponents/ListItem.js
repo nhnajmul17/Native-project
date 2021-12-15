@@ -6,11 +6,16 @@ import Icon from "./Icon";
 export default function ListItem({ imageSrc, imageSize, text, subText, textStyle, value, style }) {
     return (
         <View style={[styles.container, style]}>
+
             {imageSrc && <Icon image={imageSrc} size={imageSize} />}
+
             <View style={styles.textContainer}>
+
                 <Text style={[styles.text, textStyle]}>{text}</Text>
                 {subText && <Text style={styles.subText}> {subText} </Text>}
+
             </View>
+
             {value && (
                 <View style={styles.valueContainer}>
                     <Text style={[styles.value, textStyle]}>{value}</Text>
