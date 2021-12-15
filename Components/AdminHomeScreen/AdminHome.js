@@ -236,14 +236,45 @@ export default function AdminHome() {
                     </MenuOptions>
                 </Menu>
 
-                {/* <MenuTrigger onPress={() => alert("Touched The item")}>
-                    <Icon
-                        title="Members"
-                        image={require("../../assets/Icon/member.png")}
-                        size={60}
-                        backgroundColor="#9cf0f0"
-                    />
-                </MenuTrigger> */}
+                <Menu>
+                    <MenuTrigger>
+                        <Icon
+                            title="Members"
+                            image={require("../../assets/Icon/member.png")}
+                            size={60}
+                            backgroundColor="#9cf0f0"
+                        />
+                    </MenuTrigger>
+
+                    <MenuOptions>
+                        <MenuOption onSelect={() => alert(`Touched`)}>
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/player-1.png")}
+                                imageSize={30}
+                                text={"Alex"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/player-2.png")}
+                                imageSize={30}
+                                text={"Hunter"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/player-3.png")}
+                                imageSize={30}
+                                text={"Anderson"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                            <ListItem
+                                imageSrc={require("../../assets/Icon/player-4.png")}
+                                imageSize={30}
+                                text={"Martin"}
+                                textStyle={{ marginLeft: -10 }}
+                            />
+                        </MenuOption>
+                    </MenuOptions>
+                </Menu>
 
                 <MenuTrigger onPress={() => alert("Touched The item")}>
                     <Icon
