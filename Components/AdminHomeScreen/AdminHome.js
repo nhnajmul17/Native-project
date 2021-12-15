@@ -56,6 +56,20 @@ export default function AdminHome() {
 
 
 
+
+            <View style={styles.bottomSection}>
+                <View style={styles.footer}>
+                    <View style={styles.settingsIcon}>
+                        <Icon image={require("../../assets/Icon/settings.png")} size={40} />
+                    </View>
+                    <View style={styles.notificationIcon}>
+                        <Icon
+                            image={require("../../assets/Icon/notification.png")}
+                            size={40}
+                        />
+                    </View>
+                </View>
+            </View>
         </View>
     )
 }
