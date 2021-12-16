@@ -12,9 +12,12 @@ import {
 
 } from "react-native-popup-menu";
 
-export default function AdminHome() {
+
+
+export default function AdminHome({ navigation }) {
     return (
         <View style={styles.container}>
+
             <View style={styles.headerSection}>
                 <ImageBackground
                     style={styles.banner}
@@ -33,7 +36,7 @@ export default function AdminHome() {
 
                     <View style={styles.detailsContainer}>
                         <ValueLabel
-                            text={"Total"}
+                            text={"Total Balance"}
                             value={100000}
                             fontSize={12}
                             fontColor={"green"}
@@ -96,17 +99,14 @@ export default function AdminHome() {
                     </MenuOptions>
                 </Menu>
 
-                <Menu>
-                    <MenuTrigger onPress={() => navigation.navigate("Deposit")}>
-                        <Icon
-                            title="Deposit"
-                            image={require("../../assets/Icon/deposit.png")}
-                            size={60}
-                            backgroundColor="#9cf0f0"
-
-                        />
-                    </MenuTrigger>
-                </Menu>
+                <TouchableOpacity onPress={() => navigation.push("Deposit")}>
+                    <Icon
+                        title="Deposit"
+                        image={require("../../assets/Icon/deposit.png")}
+                        size={60}
+                        backgroundColor="#9cf0f0"
+                    />
+                </TouchableOpacity>
 
                 <Menu>
                     <MenuTrigger>
@@ -276,14 +276,14 @@ export default function AdminHome() {
                     </MenuOptions>
                 </Menu>
 
-                <MenuTrigger onPress={() => alert("Touched The item")}>
+                <TouchableOpacity onPress={() => alert("Touched The item")}>
                     <Icon
                         title="Information"
                         image={require("../../assets/Icon/information.png")}
                         size={60}
                         backgroundColor="#9cf0f0"
                     />
-                </MenuTrigger>
+                </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => alert("Rules")}>
                     <Icon

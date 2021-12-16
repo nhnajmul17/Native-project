@@ -11,7 +11,7 @@ export default function ValueLabel({ text, value, fontSize, fontColor }) {
             </View>
 
             <View style={styles.labelContainer}>
-                <Text style={[styles.textStyle, fontSize]} style={{ color: fontColor }} numberOfLines={1}> {value}</Text>
+                <Text style={[styles.textStyle, fontSize]} style={{ color: fontColor }} numberOfLines={1}>${value}</Text>
                 {/* <Label text={value} style={{ fontSize: fontSize, color: fontColor }} /> */}
             </View>
         </View>
