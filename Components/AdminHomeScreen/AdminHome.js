@@ -119,7 +119,7 @@ export default function AdminHome({ navigation }) {
                     </MenuTrigger>
 
                     <MenuOptions>
-                        <MenuOption onSelect={() => navigation.navigate("Add Investment")}>
+                        <MenuOption onSelect={() => navigation.navigate("AddInvestment")}>
                             <ListItem
                                 imageSrc={require("../../assets/Icon/add.png")}
                                 imageSize={30}
@@ -285,9 +285,9 @@ export default function AdminHome({ navigation }) {
                     />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => alert("Rules")}>
+                <TouchableOpacity onPress={() => alert("Faq")}>
                     <Icon
-                        title="Rules"
+                        title="Faq"
                         image={require("../../assets/Icon/rules.png")}
                         size={60}
                         backgroundColor="#9cf0f0"

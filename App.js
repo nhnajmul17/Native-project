@@ -12,6 +12,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { createStackNavigator } from '@react-navigation/stack';
 import Navigation from './Components/Navigation/Navigation';
 import Deposit from './Components/Deposit/Deposit';
+import AddInvestment from './Components/AddInvestment/AddInvestment';
 const Stack = createStackNavigator();
 
 
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={AdminHome} options={{ headerShown: false }} />
           <Stack.Screen name="Deposit" component={Deposit} />
+          <Stack.Screen name="AddInvestment" component={AddInvestment} />
 
         </Stack.Navigator>
       </MenuProvider>
