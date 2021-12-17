@@ -13,6 +13,8 @@ import Deposit from './Components/Deposit/Deposit';
 import AddInvestment from './Components/AddInvestment/AddInvestment';
 import SummaryStatement from './Components/SummaryStatement/SummaryStatement';
 import IndividualStatement from './Components/IndividualStatement/IndividualStatement';
+import AddAsset from './Components/Asset/AddAsset';
+import CreateAssetType from './Components/Asset/CreateAssetType';
 const Stack = createStackNavigator();
 
 
@@ -30,6 +32,9 @@ export default function App() {
           <Stack.Screen name="IndividualStatement" component={IndividualStatement} />
           <Stack.Screen name="Deposit" component={Deposit} />
           <Stack.Screen name="AddInvestment" component={AddInvestment} />
+          <Stack.Screen name="AddAsset" component={AddAsset} />
+          <Stack.Screen name="CreateAssetType" component={AddAsset} />
+
 
         </Stack.Navigator>
       </MenuProvider>

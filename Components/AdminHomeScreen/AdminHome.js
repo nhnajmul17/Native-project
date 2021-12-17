@@ -150,7 +150,7 @@ export default function AdminHome({ navigation }) {
                     </MenuTrigger>
 
                     <MenuOptions>
-                        <MenuOption onSelect={() => navigation.navigate("Create Asset")}>
+                        <MenuOption onSelect={() => navigation.navigate("AddAsset")}>
                             <ListItem
                                 imageSrc={require("../../assets/Icon/add.png")}
                                 imageSize={30}
@@ -158,9 +158,7 @@ export default function AdminHome({ navigation }) {
                                 textStyle={{ marginLeft: -10 }}
                             />
                         </MenuOption>
-                        <MenuOption
-                            onSelect={() => navigation.navigate("Create Asset Type")}
-                        >
+                        <MenuOption onSelect={() => navigation.navigate("CreateAssetType")}>
                             <ListItem
                                 imageSrc={require("../../assets/Icon/create1.png")}
                                 imageSize={30}
@@ -168,9 +166,7 @@ export default function AdminHome({ navigation }) {
                                 textStyle={{ marginLeft: -10 }}
                             />
                         </MenuOption>
-                        <MenuOption
-                            onSelect={() => navigation.navigate("Create Asset Holder")}
-                        >
+                        <MenuOption onSelect={() => navigation.navigate("CreateAssetHolder")}>
                             <ListItem
                                 imageSrc={require("../../assets/Icon/create.png")}
                                 imageSize={30}
