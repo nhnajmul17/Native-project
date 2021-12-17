@@ -71,7 +71,7 @@ export default function AdminHome({ navigation }) {
 
                     <MenuOptions>
                         <MenuOption
-                            onSelect={() => navigation.navigate("SummaryStatementNavigator")}
+                            onSelect={() => navigation.navigate("SummaryStatement")}
                         >
                             <ListItem
                                 imageSrc={require("../../assets/Icon/summaryStatement.png")}
@@ -80,7 +80,7 @@ export default function AdminHome({ navigation }) {
                                 textStyle={{ marginLeft: -10 }}
                             />
                         </MenuOption>
-                        <MenuOption onSelect={() => navigation.navigate("Individual Statement")}>
+                        <MenuOption onSelect={() => navigation.navigate("IndividualStatement")}>
                             <ListItem
                                 imageSrc={require("../../assets/Icon/individualStatement.png")}
                                 imageSize={30}

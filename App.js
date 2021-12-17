@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { MenuProvider } from 'react-native-popup-menu';
 import AdminHome from './Components/AdminHomeScreen/AdminHome';
@@ -10,9 +9,9 @@ import AdminHome from './Components/AdminHomeScreen/AdminHome';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 import { createStackNavigator } from '@react-navigation/stack';
-import Navigation from './Components/Navigation/Navigation';
 import Deposit from './Components/Deposit/Deposit';
 import AddInvestment from './Components/AddInvestment/AddInvestment';
+import SummaryStatement from './Components/SummaryStatement/SummaryStatement';
 const Stack = createStackNavigator();
 
 
@@ -26,6 +25,8 @@ export default function App() {
 
         <Stack.Navigator>
           <Stack.Screen name="Home" component={AdminHome} options={{ headerShown: false }} />
+          <Stack.Screen name="SummaryStatement" component={SummaryStatement} />
+          <Stack.Screen name="IndividualStatement" component={Deposit} />
           <Stack.Screen name="Deposit" component={Deposit} />
           <Stack.Screen name="AddInvestment" component={AddInvestment} />
 
