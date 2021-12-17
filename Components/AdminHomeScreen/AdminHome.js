@@ -4,6 +4,7 @@ import Icon from '../ToolsComponents/Icon'
 import ListItem from '../ToolsComponents/ListItem'
 import ValueLabel from '../ToolsComponents/ValueLabel'
 
+
 import {
     Menu,
     MenuOptions,
@@ -12,12 +13,14 @@ import {
 
 } from "react-native-popup-menu";
 
+const Context = React.createContext();
+
 
 
 export default function AdminHome({ navigation }) {
+
     return (
         <View style={styles.container}>
-
             <View style={styles.headerSection}>
                 <ImageBackground
                     style={styles.banner}

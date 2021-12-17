@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, Pressable } from 'react-native'
+import { View, Text, StyleSheet, Pressable, Keyboard } from 'react-native'
 import Button from '../ToolsComponents/Button'
 import DropDown from '../ToolsComponents/DropDown'
 import Icon from '../ToolsComponents/Icon'
@@ -9,6 +9,13 @@ const persons = ["Martin", "Alex", "Hunter", "Anderson"]
 export default function Deposit(props) {
     const [depositor, setDepositor] = useState('');
     const [collector, setCollector] = useState('');
+    const [amount, setAmount] = useState(0)
+    const [depositedAmount, setDepositedAmount] = useState(0)
+    const [newAmount, setnewAmount] = useState()
+
+    const newamount = (type) => {
+        setnewAmount(type)
+    }
 
     const Depositor = (selectItem) => {
         setDepositor(selectItem);
@@ -16,13 +23,24 @@ export default function Deposit(props) {
     const Collector = (selectItem) => {
         setCollector(selectItem);
     };
+
+    const addedDeposit = () => {
+        Keyboard.dismiss();
+        const total = parseInt(amount) + parseInt(newAmount);
+        setDepositedAmount(total);
+        setAmount(total);
+
+    };
+
     return (
         <View style={styles.container}>
             <DropDown dataArray={persons} text={'Depositor'} onSelect={Depositor} />
-            <InputBox text={"Amount"} />
+            <InputBox text={"Amount"} onChangeText={newamount} />
             <DropDown dataArray={persons} text={'Collector'} onSelect={Collector} />
 
-            <Button onPress={() => alert('Deposit Added')} name={"Save"}></Button>
+            <Button onPress={addedDeposit} name={"Save"}></Button>
+            <Text style={styles.depositText}>Deposited Amount: {'$' + depositedAmount}</Text>
+
             <View style={styles.bottomSection}>
                 <View style={styles.footer}>
                     <View style={styles.settingsIcon}>
@@ -40,13 +58,23 @@ export default function Deposit(props) {
             </View>
         </View>
 
+
     )
 }
+
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 20,
+    },
+    depositText: {
+        fontSize: 20,
+        paddingLeft: 5,
+        marginTop: 20,
+        marginLeft: 20,
+        height: 25,
+        color: "black",
     },
     bottomSection: {
         flex: 1,

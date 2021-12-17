@@ -55,7 +55,7 @@ export default function CreateAssetType(props) {
                     <FlatList
                         data={assetTypeData}
                         extraData={id}
-                        keyExtractor={(item) => item.id.toString()}
+                        keyExtractor={(item) => item.id}
                         renderItem={({ item }) => (
                             <ListButton text={item.name} onDelete={() => delet(item.id)} />
                         )}

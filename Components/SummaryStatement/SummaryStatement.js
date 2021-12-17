@@ -21,7 +21,7 @@ const Data = [
     },
     {
         id: 3,
-        y: 100000,
+        y: 40000,
         name: "Investment",
         src: require("../../assets/Icon/investment2.png"),
         target: "Investment Statement"
