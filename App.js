@@ -12,6 +12,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Deposit from './Components/Deposit/Deposit';
 import AddInvestment from './Components/AddInvestment/AddInvestment';
 import SummaryStatement from './Components/SummaryStatement/SummaryStatement';
+import IndividualStatement from './Components/IndividualStatement/IndividualStatement';
 const Stack = createStackNavigator();
 
 
@@ -26,7 +27,7 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={AdminHome} options={{ headerShown: false }} />
           <Stack.Screen name="SummaryStatement" component={SummaryStatement} />
-          <Stack.Screen name="IndividualStatement" component={Deposit} />
+          <Stack.Screen name="IndividualStatement" component={IndividualStatement} />
           <Stack.Screen name="Deposit" component={Deposit} />
           <Stack.Screen name="AddInvestment" component={AddInvestment} />
 

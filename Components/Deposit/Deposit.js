@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, StyleSheet, Pressable } from 'react-native'
 import Button from '../ToolsComponents/Button'
 import DropDown from '../ToolsComponents/DropDown'
@@ -7,13 +7,22 @@ import InputBox from '../ToolsComponents/InputBox'
 
 const persons = ["Martin", "Alex", "Hunter", "Anderson"]
 export default function Deposit(props) {
+    const [depositor, setDepositor] = useState('');
+    const [collector, setCollector] = useState('');
+
+    const Depositor = (selectItem) => {
+        setDepositor(selectItem);
+    };
+    const Collector = (selectItem) => {
+        setCollector(selectItem);
+    };
     return (
         <View style={styles.container}>
-            <DropDown dataArray={persons} text={'Depositor'} />
+            <DropDown dataArray={persons} text={'Depositor'} onSelect={Depositor} />
             <InputBox text={"Amount"} />
-            <DropDown dataArray={persons} text={'Collector'} />
+            <DropDown dataArray={persons} text={'Collector'} onSelect={Collector} />
 
-            <Button name={"Save"}></Button>
+            <Button onPress={() => alert('Deposit Added')} name={"Save"}></Button>
             <View style={styles.bottomSection}>
                 <View style={styles.footer}>
                     <View style={styles.settingsIcon}>
