@@ -33,7 +33,7 @@ export default function App() {
           <Stack.Screen name="Deposit" component={Deposit} />
           <Stack.Screen name="AddInvestment" component={AddInvestment} />
           <Stack.Screen name="AddAsset" component={AddAsset} />
-          <Stack.Screen name="CreateAssetType" component={AddAsset} />
+          <Stack.Screen name="CreateAssetType" component={CreateAssetType} />
 
 
         </Stack.Navigator>

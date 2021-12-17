@@ -39,6 +39,10 @@ export default function CreateAssetType(props) {
         assetTypeData.push(obj);
     };
 
+    const delet = (id) => {
+        const newAssetType = assetTypeData.filter(item => item.id != id);
+        setAssetTypeData(newAssetType)
+    }
     return (
 
         <View style={styles.container}>
@@ -53,7 +57,7 @@ export default function CreateAssetType(props) {
                         extraData={id}
                         keyExtractor={(item) => item.id.toString()}
                         renderItem={({ item }) => (
-                            <ListButton text={item.name} onDelete={() => console.log("Delete Tapped")} />
+                            <ListButton text={item.name} onDelete={() => delet(item.id)} />
                         )}
                     />
                 </View>
