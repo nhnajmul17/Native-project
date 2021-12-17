@@ -9,8 +9,7 @@ const persons = ["Martin", "Alex", "Hunter", "Anderson"]
 export default function Deposit(props) {
     const [depositor, setDepositor] = useState('');
     const [collector, setCollector] = useState('');
-    const [amount, setAmount] = useState(0)
-    const [depositedAmount, setDepositedAmount] = useState(0)
+    const [depositedAmount, setDepositedAmount] = useState(40000)
     const [newAmount, setnewAmount] = useState()
 
     const newamount = (type) => {
@@ -26,9 +25,8 @@ export default function Deposit(props) {
 
     const addedDeposit = () => {
         Keyboard.dismiss();
-        const total = parseInt(amount) + parseInt(newAmount);
+        const total = parseInt(depositedAmount) + parseInt(newAmount);
         setDepositedAmount(total);
-        setAmount(total);
 
     };
 
