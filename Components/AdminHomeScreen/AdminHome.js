@@ -18,7 +18,6 @@ const Context = React.createContext();
 
 
 export default function AdminHome({ navigation }) {
-
     return (
         <View style={styles.container}>
             <View style={styles.headerSection}>
@@ -40,19 +39,19 @@ export default function AdminHome({ navigation }) {
                     <View style={styles.detailsContainer}>
                         <ValueLabel
                             text={"Total Balance"}
-                            value={100000}
+                            value={10000}
                             fontSize={12}
                             fontColor={"green"}
                         />
                         <ValueLabel
                             text={"Asset"}
-                            value={60000}
+                            value={6000}
                             fontSize={12}
                             fontColor={"green"}
                         />
                         <ValueLabel
                             text={"Investment"}
-                            value={40000}
+                            value={4000}
                             fontSize={12}
                             fontColor={"green"}
                         />

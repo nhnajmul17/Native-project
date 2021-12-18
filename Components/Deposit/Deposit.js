@@ -6,10 +6,10 @@ import Icon from '../ToolsComponents/Icon'
 import InputBox from '../ToolsComponents/InputBox'
 
 const persons = ["Martin", "Alex", "Hunter", "Anderson"]
-export default function Deposit(props) {
+export default function Deposit() {
     const [depositor, setDepositor] = useState('');
     const [collector, setCollector] = useState('');
-    const [depositedAmount, setDepositedAmount] = useState(40000)
+    const [depositedAmount, setDepositedAmount] = useState(0)
     const [newAmount, setnewAmount] = useState()
 
     const newamount = (type) => {
@@ -27,7 +27,7 @@ export default function Deposit(props) {
         Keyboard.dismiss();
         const total = parseInt(depositedAmount) + parseInt(newAmount);
         setDepositedAmount(total);
-
+        alert('Deposited')
     };
 
     return (
