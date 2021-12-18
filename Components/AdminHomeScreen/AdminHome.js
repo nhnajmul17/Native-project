@@ -283,9 +283,9 @@ export default function AdminHome({ navigation }) {
                     />
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => alert("Faq")}>
+                <TouchableOpacity onPress={() => navigation.navigate('About')}>
                     <Icon
-                        title="Faq"
+                        title="About"
                         image={require("../../assets/Icon/rules.png")}
                         size={60}
                         backgroundColor="#9cf0f0"

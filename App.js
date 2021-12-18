@@ -15,6 +15,7 @@ import SummaryStatement from './Components/SummaryStatement/SummaryStatement';
 import IndividualStatement from './Components/IndividualStatement/IndividualStatement';
 import AddAsset from './Components/Asset/AddAsset';
 import CreateAssetType from './Components/Asset/CreateAssetType';
+import About from './Components/About/About';
 const Stack = createStackNavigator();
 
 
@@ -34,6 +35,7 @@ export default function App() {
           <Stack.Screen name="AddInvestment" component={AddInvestment} />
           <Stack.Screen name="AddAsset" component={AddAsset} />
           <Stack.Screen name="CreateAssetType" component={CreateAssetType} />
+          <Stack.Screen name="About" component={About} />
 
 
         </Stack.Navigator>
